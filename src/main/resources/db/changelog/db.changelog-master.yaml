@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-chartographer-table.yaml
+  - include:
+      file: db/changelog/changeset/create-fragment-table.yaml

@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-fragment
+      author: Alexander
+      changes:
+        - createTable:
+            tableName: fragment
+            columns:
+              - column:
+                  name: fragment_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: file_path
+                  type: varchar(300)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: number
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: chartographer_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_fragment
+                    referencedTableName: chartographer
+                    referencedColumnNames: chartographer_id

@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-chartographer
+      author: Alexander
+      changes:
+        - createTable:
+            tableName: chartographer
+            columns:
+              - column:
+                  name: chartographer_id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: directory_path
+                  type: varchar(300)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: width
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: height
+                  type: int
+                  constraints:
+                    nullable: false
